@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background:
+          radial-gradient(circle at top, rgba(16, 185, 129, 0.12), transparent 30%),
+          #0b1120;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+  padding: 40px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #34d399;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 850px;
+  font-size: 52px;
+  line-height: 1.05;
+  color: white;
+}
+
+.hero-text {
+  max-width: 850px;
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.button-row button,
+.link-list button {
+  background: #10b981;
+  color: #04130e;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.button-row .secondary {
+  background: transparent;
+  color: #34d399;
+  border: 1px solid #34d399;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  padding: 24px;
+}
+
+.label {
+  margin: 0 0 10px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.accent {
+  color: #34d399 !important;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.large-card,
+.side-card {
+  padding: 28px;
+}
+
+
+.large-card h2,
+.side-card h2,
+.section-block h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 30px;
+  color: white;
+}
+
+.large-card p {
+  margin: 0;
+  line-height: 1.8;
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-list button {
+  text-align: left;
+}
+
+.section-block {
+  margin-bottom: 24px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  margin: 0;
+  line-height: 1.8;
+  color: #cbd5e1;
+  font-size: 17px;
+  padding: 22px;
+  grid-column: 1 / -1;
+  font-weight: normal;
+
+}
+
+.diary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.section-block.card {
+  padding: 28px;
+}
+
+.diary-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.diary-card h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.diary-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .info-grid,
+  .features-grid,
+  .diary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .info-grid,
+  .features-grid,
+  .diary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .large-card,
+  .side-card,
+  .section-block.card {
+    padding: 20px;
+  }
+
+}
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.source-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.source-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.source-text h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.source-text p {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.source-arrow {
+  font-size: 1.4rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.source-item:hover .source-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
